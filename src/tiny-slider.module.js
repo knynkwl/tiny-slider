@@ -1260,7 +1260,7 @@ export var tns = function(options) {
     if (disable) {
       sheet.disabled = true;
       container.className = container.className.replace(classContainer.substring(1), '');
-      container.style = '';
+      container.removeAttribute('style');
       if (loop) {
         for (var j = cloneCount; j--;) {
           if (carousel) { hideElement(slideItems[j]); }
@@ -2262,7 +2262,7 @@ export var tns = function(options) {
       // container
       container.id = containerIdCached || '';
       container.className = container.className.replace(classContainer, '');
-      container.style = '';
+      container.removeAttribute('style');
       if (carousel && TRANSITIONEND) {
         var eve = {};
         eve[TRANSITIONEND] = onTransitionEnd;
